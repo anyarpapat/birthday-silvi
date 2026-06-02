@@ -1,202 +1,1092 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Untuk Silvi ❤️</title><link rel="stylesheet" href="style.css"></head>
-<body><div id="stars"></div>
-<div id="sakura-container"></div><!-- HERO --><section class="hero"><div class="hero-image">
-    <img src="senyum-favoritku.png" alt="Silvi">
-</div>
 
-<div class="hero-content">
-    <h1>Untuk Silvi ❤️</h1>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-    <p>
-        Sebuah cerita yang dimulai dari
-    </p>
+<title>
+Untuk Silvi ❤️
+</title>
 
-    <div class="chat-preview">
-        <span>💬 haloo</span>
-        <span>💬 haii</span>
-    </div>
+<style>
 
-    <button id="startBtn">
-        ❤️ Buka Cerita Kita
-    </button>
-</div>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-</section><!-- OPENING --><section class="opening hidden"><div class="line-chat">
+html,
+body{
 
-    <div class="chat left">
-        haloo
-    </div>
+width:100%;
+height:100%;
 
-    <div class="typing">
-        Silvi sedang mengetik...
-    </div>
+font-family:
+'Segoe UI',
+sans-serif;
 
-    <div class="chat right">
-        haii ❤️
-    </div>
+background:
+linear-gradient(
+180deg,
+#09061a,
+#1c1035,
+#2f1748
+);
 
-</div>
+color:white;
+
+overflow:hidden;
+
+}
+
+/* STAR BACKGROUND */
+
+#stars{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+z-index:-2;
+
+}
+
+.star{
+
+position:absolute;
+
+background:white;
+
+border-radius:50%;
+
+animation:
+twinkle 3s infinite;
+
+}
+
+@keyframes twinkle{
+
+0%{
+opacity:.2;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+opacity:.2;
+}
+
+}
+
+/* SAKURA */
+
+#sakura{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+/* PAGE */
+
+.page{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+display:none;
+
+justify-content:center;
+
+align-items:center;
+
+padding:25px;
+
+overflow-y:auto;
+
+}
+
+.page.active{
+
+display:flex;
+
+}
+
+/* CARD */
+
+.card{
+
+width:min(95vw,800px);
+
+background:
+rgba(
+255,
+255,
+255,
+0.08
+);
+
+backdrop-filter:
+blur(12px);
+
+padding:25px;
+
+border-radius:30px;
+
+text-align:center;
+
+box-shadow:
+0 0 30px
+rgba(
+255,
+192,
+203,
+0.15
+);
+
+}
+
+.card img{
+
+width:100%;
+
+border-radius:20px;
+
+margin-bottom:20px;
+
+}
+
+h1{
+
+color:#ffd6e7;
+
+margin-bottom:15px;
+
+}
+
+h2{
+
+color:#ffd6e7;
+
+margin-bottom:15px;
+
+}
+
+p{
+
+line-height:1.9;
+
+margin-bottom:15px;
+
+}
+
+.btn{
+
+border:none;
+
+padding:
+15px 28px;
+
+background:
+#ff6ea9;
+
+color:white;
+
+border-radius:999px;
+
+cursor:pointer;
+
+font-size:1rem;
+
+margin-top:20px;
+
+}
+
+.btn:hover{
+
+transform:
+scale(1.05);
+
+}
+
+/* CHAT */
+
+.chat{
+
+max-width:350px;
+
+padding:15px;
+
+border-radius:20px;
+
+margin:15px auto;
+
+}
+
+.left{
+
+background:
+rgba(
+255,
+255,
+255,
+0.12
+);
+
+text-align:left;
+
+}
+
+.right{
+
+background:
+#ff6ea9;
+
+text-align:right;
+
+}
+
+#counter{
+
+font-size:2rem;
+
+font-weight:bold;
+
+color:#ffd6e7;
+
+margin:20px 0;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="stars"></div>
+
+<div id="sakura"></div>
+
+<!-- PAGE 1 -->
+
+<section
+class="page active"
+id="page1">
+
+<div class="card">
+
+<img
+src="senyum-favoritku.png">
+
+<h1>
+Untuk Silvi ❤️
+</h1>
+
+<p>
+
+Sebuah cerita
+yang dimulai dari
+
+</p>
 
 <h2>
-    Dan tanpa kita sadari...
+💬 haloo
+</h2>
+
+<h2>
+💬 haii
+</h2>
+
+<button
+class="btn"
+onclick="nextPage(2)">
+
+❤️ Buka Cerita Kita
+
+</button>
+
+</div>
+
+</section>
+
+<!-- PAGE 2 -->
+
+<section
+class="page"
+id="page2">
+
+<div class="card">
+
+<h2>
+📱 LINE Nearby
 </h2>
 
 <p>
-    semuanya dimulai dari sini.
+
+16 Februari 2026
+
 </p>
 
-</section><!-- FIRST MEET --><section class="memory hidden"><img src="first-meet.png">
+<div
+class="chat left">
 
-<div class="memory-card">
+Jundan :
 
-    <h2>🌹 First Meet</h2>
+<br>
 
-    <p>
-        Hari pertama kita bertemu.
-        Sebuah awal yang biasa saja,
-        tapi menjadi luar biasa setelahnya.
-    </p>
+haloo
 
 </div>
 
-</section><!-- HARI JADIAN --><section class="memory hidden"><img src="hari-jadian.png">
+<div
+class="chat right">
 
-<div class="memory-card">
+Silvi :
 
-    <h2>❤️ Hari Jadian</h2>
+<br>
 
-    <p>
-        24 Maret 2026.
-        Hari ketika "aku" dan "kamu"
-        berubah menjadi "kita".
-    </p>
+haii ❤️
 
 </div>
 
-</section><!-- CONCERT --><section class="memory hidden"><img src="concert-date.png">
+<p>
 
-<div class="memory-card">
+Dan tanpa kita sadari...
 
-    <h2>🎵 Concert Date</h2>
+semuanya dimulai
+dari sini.
 
-    <p>
-        Di tengah lampu, musik,
-        dan keramaian...
-        yang paling aku lihat tetap kamu.
-    </p>
+</p>
 
-</div>
+<button
+class="btn"
+onclick="nextPage(3)">
 
-</section><!-- SURABAYA --><section class="memory hidden"><img src="surabaya-trip.png">
+Lanjut ➜
 
-<div class="memory-card">
-
-    <h2>🚆 Surabaya Trip</h2>
-
-    <p>
-        Karena ternyata kota yang berbeda
-        terasa seperti rumah
-        ketika bersamamu.
-    </p>
+</button>
 
 </div>
 
-</section><!-- SENYUM --><section class="smile-section hidden"><img src="senyum-favoritku.png">
+</section>
+<!-- PAGE 3 -->
 
-<div class="smile-text">
+<section
+class="page"
+id="page3">
 
-    <p>
-        Dari semua hal yang aku suka tentangmu...
-    </p>
+<div class="card">
 
-    <h2>
-        Yang paling aku suka adalah
-        senyummu ❤️
-    </h2>
+<img
+src="first-meet.png">
 
-</div>
-
-</section><!-- LETTER --><section class="letter hidden"><div class="envelope">
-
-    <div class="letter-content">
-
-        <h2>💌 Untuk Silvi</h2>
-
-        <p>
-            Selamat ulang tahun yang ke-23, Sayang.
-            <br><br>
-
-            Terima kasih sudah hadir dalam hidupku.
-            Terima kasih sudah membalas satu pesan sederhana:
-
-            <br><br>
-
-            "haii"
-
-            <br><br>
-
-            Aku masih sering tersenyum sendiri ketika mengingat bagaimana semuanya dimulai.
-
-            <br><br>
-
-            LINE Nearby.
-            Sebuah pesan sederhana.
-            Sebuah kata sederhana.
-
-            <br><br>
-
-            "haloo"
-
-            <br><br>
-
-            Dan karena itulah aku bersyukur.
-
-            Karena dari semua kemungkinan yang ada,
-            aku menemukanmu ❤️
-        </p>
-
-    </div>
-
-</div>
-
-</section><!-- COUNTER --><section class="counter-section hidden"><h2>⏳ Sudah Bersama Selama</h2>
-
-<div id="counter"></div>
-
-<p>Sejak 24 Maret 2026 ❤️</p>
-
-</section><!-- ENDING --><section class="ending hidden"><h2>
-    Terima kasih sudah lahir ke dunia.
+<h2>
+🌹 First Meet
 </h2>
 
 <p>
-    Karena kalau tidak...
+
+Hari pertama kita bertemu.
+
 </p>
 
 <p>
-    Aku tidak akan pernah menemukanmu ❤️
+
+Sebuah awal yang biasa saja.
+
+Tapi ternyata menjadi awal
+dari cerita yang indah.
+
 </p>
 
-<div class="ending-chat">
+<button
+class="btn"
+onclick="nextPage(4)">
 
-    <p>💬 haloo</p>
+Lanjut ➜
 
-    <p>💬 haii</p>
+</button>
+
+</div>
+
+</section>
+
+<!-- PAGE 4 -->
+
+<section
+class="page"
+id="page4">
+
+<div class="card">
+
+<img
+src="hari-jadian.png">
+
+<h2>
+❤️ Hari Jadian
+</h2>
+
+<p>
+
+24 Maret 2026
+
+</p>
+
+<p>
+
+Hari ketika
+
+"aku"
+
+dan
+
+"kamu"
+
+berubah menjadi
+
+"KITA"
+
+❤️
+
+</p>
+
+<button
+class="btn"
+onclick="nextPage(5)">
+
+Lanjut ➜
+
+</button>
+
+</div>
+
+</section>
+
+<!-- PAGE 5 -->
+
+<section
+class="page"
+id="page5">
+
+<div class="card">
+
+<img
+src="concert-date.png">
+
+<h2>
+🎵 Concert Date
+</h2>
+
+<p>
+
+Di tengah lampu,
+musik,
+dan keramaian...
+
+</p>
+
+<p>
+
+Yang paling aku lihat
+tetap kamu ❤️
+
+</p>
+
+<button
+class="btn"
+onclick="nextPage(6)">
+
+Lanjut ➜
+
+</button>
+
+</div>
+
+</section>
+
+<!-- PAGE 6 -->
+
+<section
+class="page"
+id="page6">
+
+<div class="card">
+
+<img
+src="surabaya-trip.png">
+
+<h2>
+🚆 Surabaya Trip
+</h2>
+
+<p>
+
+Karena ternyata
+kota yang berbeda
+
+terasa seperti rumah
+
+ketika bersamamu ❤️
+
+</p>
+
+<button
+class="btn"
+onclick="nextPage(7)">
+
+Lanjut ➜
+
+</button>
+
+</div>
+
+</section>
+
+<!-- PAGE 7 -->
+
+<section
+class="page"
+id="page7">
+
+<div class="card">
+
+<img
+src="senyum-favoritku.png">
+
+<h2>
+
+😊 Senyum Favoritku
+
+</h2>
+
+<p>
+
+Dari semua hal
+yang aku suka tentangmu...
+
+</p>
+
+<h2>
+
+Yang paling aku suka
+
+adalah
+
+senyummu ❤️
+
+</h2>
+
+<p>
+
+Karena setiap kali
+kamu tersenyum...
+
+aku merasa semuanya
+baik-baik saja.
+
+</p>
+
+<button
+class="btn"
+onclick="nextPage(8)">
+
+Lanjut ➜
+
+</button>
+
+</div>
+
+</section>
+<!-- PAGE 8 -->
+
+<section
+class="page"
+id="page8">
+
+<div class="card">
+
+<h2>
+💌 Untuk Silvi
+</h2>
+
+<p>
+
+Selamat ulang tahun
+yang ke-23, Sayang.
+
+</p>
+
+<p>
+
+Terima kasih sudah hadir
+dalam hidupku.
+
+</p>
+
+<p>
+
+Terima kasih sudah
+membalas satu pesan sederhana.
+
+</p>
+
+<h2>
+"haii"
+</h2>
+
+<p>
+
+Aku masih sering
+tersenyum sendiri
+ketika mengingat
+bagaimana semuanya dimulai.
+
+</p>
+
+<p>
+
+LINE Nearby.
+
+</p>
+
+<p>
+
+Sebuah pesan sederhana.
+
+</p>
+
+<p>
+
+Sebuah kata sederhana.
+
+</p>
+
+<h2>
+"haloo"
+</h2>
+
+<p>
+
+Kalau waktu itu
+aku tidak mengirim pesan itu...
+
+</p>
+
+<p>
+
+Kalau waktu itu
+kamu tidak membalas...
+
+</p>
+
+<p>
+
+Mungkin cerita ini
+tidak akan pernah ada.
+
+</p>
+
+<p>
+
+Dan karena itulah
+aku bersyukur.
+
+</p>
+
+<p>
+
+Karena dari semua kemungkinan
+yang ada...
+
+</p>
+
+<h2>
+Aku menemukanmu ❤️
+</h2>
+
+<button
+class="btn"
+onclick="nextPage(9)">
+
+Lanjut ➜
+
+</button>
+
+</div>
+
+</section>
+
+<!-- PAGE 9 -->
+
+<section
+class="page"
+id="page9">
+
+<div class="card">
+
+<h2>
+⏳ Sudah Bersama Selama
+</h2>
+
+<div id="counter">
+
+0 Hari
+
+</div>
+
+<p>
+
+Sejak
+
+24 Maret 2026 ❤️
+
+</p>
+
+<button
+class="btn"
+onclick="nextPage(10)">
+
+Lanjut ➜
+
+</button>
+
+</div>
+
+</section>
+
+<!-- PAGE 10 -->
+
+<section
+class="page"
+id="page10">
+
+<div class="card">
+
+<h1>
+🌙
+</h1>
+
+<h2>
+
+Terima kasih
+sudah lahir ke dunia.
+
+</h2>
+
+<p>
+
+Karena kalau tidak...
+
+</p>
+
+<p>
+
+Aku tidak akan pernah
+menemukanmu ❤️
+
+</p>
+
+<br>
+
+<div
+class="chat left">
+
+💬 haloo
+
+</div>
+
+<div
+class="chat right">
+
+💬 haii
 
 </div>
 
 <h1>
-    Jundan ❤️ Silvi
+
+Jundan ❤️ Silvi
+
 </h1>
 
 <p>
-    Forever started with
-    haloo & haii 🤭
+
+Since
+24 Maret 2026
+
 </p>
 
-</section><script src="script.js"></script></body>
+<h2>
+
+Forever started with
+
+haloo & haii 🤭
+
+</h2>
+
+</div>
+
+</section>
+
+<script>
+
+/* =========================
+   NEXT PAGE
+========================= */
+
+function nextPage(page){
+
+document
+.querySelectorAll(".page")
+.forEach(section=>{
+
+section.classList.remove(
+"active"
+);
+
+});
+
+document
+.getElementById(
+"page"+page
+)
+.classList.add(
+"active"
+);
+
+}
+
+/* =========================
+   STARS
+========================= */
+
+const stars =
+document.getElementById(
+"stars"
+);
+
+for(
+let i=0;
+i<120;
+i++
+){
+
+const star =
+document.createElement(
+"div"
+);
+
+star.classList.add(
+"star"
+);
+
+const size =
+Math.random()*3;
+
+star.style.width =
+size+"px";
+
+star.style.height =
+size+"px";
+
+star.style.left =
+Math.random()*100+"%";
+
+star.style.top =
+Math.random()*100+"%";
+
+star.style.animationDelay =
+Math.random()*3+"s";
+
+stars.appendChild(
+star
+);
+
+}
+
+/* =========================
+   COUNTER
+========================= */
+
+function updateCounter(){
+
+const startDate =
+new Date(
+"2026-03-24T00:00:00"
+);
+
+const now =
+new Date();
+
+const diff =
+now - startDate;
+
+const days =
+Math.floor(
+diff /
+(1000*60*60*24)
+);
+
+const hours =
+Math.floor(
+(diff %
+(1000*60*60*24))
+/
+(1000*60*60)
+);
+
+const minutes =
+Math.floor(
+(diff %
+(1000*60*60))
+/
+(1000*60)
+);
+
+const seconds =
+Math.floor(
+(diff %
+(1000*60))
+/
+1000
+);
+
+const counter =
+document.getElementById(
+"counter"
+);
+
+if(counter){
+
+counter.innerHTML =
+
+days +
+" Hari<br>" +
+
+hours +
+" Jam<br>" +
+
+minutes +
+" Menit<br>" +
+
+seconds +
+" Detik";
+
+}
+
+}
+
+setInterval(
+updateCounter,
+1000
+);
+
+updateCounter();
+
+/* =========================
+   SAKURA
+========================= */
+
+const sakura =
+document.getElementById(
+"sakura"
+);
+
+function createPetal(){
+
+const petal =
+document.createElement(
+"div"
+);
+
+petal.innerHTML =
+"🌸";
+
+petal.style.position =
+"absolute";
+
+petal.style.left =
+Math.random()*100+
+"vw";
+
+petal.style.top =
+"-20px";
+
+petal.style.fontSize =
+(
+Math.random()*12+14
+)+"px";
+
+petal.style.opacity =
+Math.random();
+
+const duration =
+Math.random()*8+6;
+
+petal.animate(
+
+[
+{
+transform:
+"translateY(0px)"
+},
+
+{
+transform:
+"translateY(110vh) rotate(360deg)"
+}
+],
+
+{
+duration:
+duration*1000,
+
+easing:
+"linear"
+}
+
+);
+
+sakura.appendChild(
+petal
+);
+
+setTimeout(()=>{
+
+petal.remove();
+
+},duration*1000);
+
+}
+
+setInterval(
+createPetal,
+400
+);
+
+</script>
+
+</body>
 </html>
