@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Silvi ❤️</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(180deg,#ffb6c1,#fff);color:#333}
+section{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:20px;text-align:center}
+h1,h2{color:#d63384}
+.card{background:#fff;border-radius:20px;padding:20px;max-width:800px;box-shadow:0 4px 20px rgba(0,0,0,.1)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px;width:100%;max-width:900px}
+.gallery img{width:100%;border-radius:15px;object-fit:cover;height:240px}
+#countdown{font-size:2rem;font-weight:bold}
+</style>
+</head>
+<body>
+
+<section>
+<div class="card">
+<h1>🌙 Satu Hari di Bulan Juni</h1>
+<p>Sebuah cerita yang berawal dari LINE Nearby...</p>
+<p><b>haloo 🤭</b></p>
+</div>
+</section>
+
+<section>
+<div class="card">
+<h2>📱 Awal Cerita</h2>
+<p>16 Februari 2026</p>
+<p>Dari satu pesan sederhana:</p>
+<p><b>Jundan:</b> haloo</p>
+<p>Dan dari situlah semuanya dimulai ❤️</p>
+</div>
+</section>
+
+<section>
+<div class="card">
+<h2>❤️ Timeline Kita</h2>
+<p>16 Februari 2026 — Kenalan di LINE Nearby</p>
+<p>24 Maret 2026 — Resmi bersama</p>
+<p>🌹 First Meet</p>
+<p>🎵 Konser Date</p>
+</div>
+</section>
+
+<section>
+<div class="card">
+<h2>⏳ Countdown Menuju Ulang Tahun Silvi</h2>
+<div id="countdown"></div>
+</div>
+</section>
+
+<section>
+<h2>📸 Kenangan Kita</h2>
+<div class="gallery">
+<img src="foto1.jpg" alt="foto1">
+<img src="foto2.jpg" alt="foto2">
+<img src="foto3.jpg" alt="foto3">
+<img src="foto4.jpg" alt="foto4">
+<img src="foto5.jpg" alt="foto5">
+</div>
+</section>
+
+<section>
+<div class="card">
+<h2>💌 Untuk Silvi</h2>
+<p>Selamat ulang tahun yang ke-23, Silvi.</p>
+<p>Terima kasih sudah hadir dalam hidupku.</p>
+<p>Dan dari semua hal yang aku suka tentangmu...</p>
+<p><b>Yang paling aku suka adalah senyummu. ❤️</b></p>
+<p>Karena setiap kali kamu tersenyum, aku merasa dunia ikut tersenyum.</p>
+<p>Forever started with a simple "haloo" 🤭</p>
+<p><b>— Jundan</b></p>
+</div>
+</section>
+
+<script>
+const target = new Date("2026-06-04T00:00:00");
+function update(){
+ const now = new Date();
+ const d = target-now;
+ if(d<=0){document.getElementById("countdown").innerHTML="🎂 Happy Birthday Silvi ❤️";return;}
+ const days=Math.floor(d/86400000);
+ const hrs=Math.floor((d%86400000)/3600000);
+ const mins=Math.floor((d%3600000)/60000);
+ const secs=Math.floor((d%60000)/1000);
+ document.getElementById("countdown").innerHTML=`${days} Hari ${hrs} Jam ${mins} Menit ${secs} Detik`;
+}
+setInterval(update,1000); update();
+</script>
+</body>
+</html>
