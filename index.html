@@ -1,93 +1,202 @@
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Silvi ❤️</title>
-<style>
-body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(180deg,#ffb6c1,#fff);color:#333}
-section{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:20px;text-align:center}
-h1,h2{color:#d63384}
-.card{background:#fff;border-radius:20px;padding:20px;max-width:800px;box-shadow:0 4px 20px rgba(0,0,0,.1)}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px;width:100%;max-width:900px}
-.gallery img{width:100%;border-radius:15px;object-fit:cover;height:240px}
-#countdown{font-size:2rem;font-weight:bold}
-</style>
-</head>
-<body>
-
-<section>
-<div class="card">
-<h1>🌙 Satu Hari di Bulan Juni</h1>
-<p>Sebuah cerita yang berawal dari LINE Nearby...</p>
-<p><b>haloo 🤭</b></p>
+<title>Untuk Silvi ❤️</title><link rel="stylesheet" href="style.css"></head>
+<body><div id="stars"></div>
+<div id="sakura-container"></div><!-- HERO --><section class="hero"><div class="hero-image">
+    <img src="senyum-favoritku.jpg" alt="Silvi">
 </div>
-</section>
 
-<section>
-<div class="card">
-<h2>📱 Awal Cerita</h2>
-<p>16 Februari 2026</p>
-<p>Dari satu pesan sederhana:</p>
-<p><b>Jundan:</b> haloo</p>
-<p>Dan dari situlah semuanya dimulai ❤️</p>
+<div class="hero-content">
+    <h1>Untuk Silvi ❤️</h1>
+
+    <p>
+        Sebuah cerita yang dimulai dari
+    </p>
+
+    <div class="chat-preview">
+        <span>💬 haloo</span>
+        <span>💬 haii</span>
+    </div>
+
+    <button id="startBtn">
+        ❤️ Buka Cerita Kita
+    </button>
 </div>
-</section>
 
-<section>
-<div class="card">
-<h2>❤️ Timeline Kita</h2>
-<p>16 Februari 2026 — Kenalan di LINE Nearby</p>
-<p>24 Maret 2026 — Resmi bersama</p>
-<p>🌹 First Meet</p>
-<p>🎵 Konser Date</p>
+</section><!-- OPENING --><section class="opening hidden"><div class="line-chat">
+
+    <div class="chat left">
+        haloo
+    </div>
+
+    <div class="typing">
+        Silvi sedang mengetik...
+    </div>
+
+    <div class="chat right">
+        haii ❤️
+    </div>
+
 </div>
-</section>
 
-<section>
-<div class="card">
-<h2>⏳ Countdown Menuju Ulang Tahun Silvi</h2>
-<div id="countdown"></div>
+<h2>
+    Dan tanpa kita sadari...
+</h2>
+
+<p>
+    semuanya dimulai dari sini.
+</p>
+
+</section><!-- FIRST MEET --><section class="memory hidden"><img src="first-meet.jpg">
+
+<div class="memory-card">
+
+    <h2>🌹 First Meet</h2>
+
+    <p>
+        Hari pertama kita bertemu.
+        Sebuah awal yang biasa saja,
+        tapi menjadi luar biasa setelahnya.
+    </p>
+
 </div>
-</section>
 
-<section>
-<h2>📸 Kenangan Kita</h2>
-<div class="gallery">
-<img src="foto1.jpg" alt="foto1">
-<img src="foto2.jpg" alt="foto2">
-<img src="foto3.jpg" alt="foto3">
-<img src="foto4.jpg" alt="foto4">
-<img src="foto5.jpg" alt="foto5">
+</section><!-- HARI JADIAN --><section class="memory hidden"><img src="hari-jadian.jpg">
+
+<div class="memory-card">
+
+    <h2>❤️ Hari Jadian</h2>
+
+    <p>
+        24 Maret 2026.
+        Hari ketika "aku" dan "kamu"
+        berubah menjadi "kita".
+    </p>
+
 </div>
-</section>
 
-<section>
-<div class="card">
-<h2>💌 Untuk Silvi</h2>
-<p>Selamat ulang tahun yang ke-23, Silvi.</p>
-<p>Terima kasih sudah hadir dalam hidupku.</p>
-<p>Dan dari semua hal yang aku suka tentangmu...</p>
-<p><b>Yang paling aku suka adalah senyummu. ❤️</b></p>
-<p>Karena setiap kali kamu tersenyum, aku merasa dunia ikut tersenyum.</p>
-<p>Forever started with a simple "haloo" 🤭</p>
-<p><b>— Jundan</b></p>
+</section><!-- CONCERT --><section class="memory hidden"><img src="concert-date.jpg">
+
+<div class="memory-card">
+
+    <h2>🎵 Concert Date</h2>
+
+    <p>
+        Di tengah lampu, musik,
+        dan keramaian...
+        yang paling aku lihat tetap kamu.
+    </p>
+
 </div>
-</section>
 
-<script>
-const target = new Date("2026-06-04T00:00:00");
-function update(){
- const now = new Date();
- const d = target-now;
- if(d<=0){document.getElementById("countdown").innerHTML="🎂 Happy Birthday Silvi ❤️";return;}
- const days=Math.floor(d/86400000);
- const hrs=Math.floor((d%86400000)/3600000);
- const mins=Math.floor((d%3600000)/60000);
- const secs=Math.floor((d%60000)/1000);
- document.getElementById("countdown").innerHTML=`${days} Hari ${hrs} Jam ${mins} Menit ${secs} Detik`;
-}
-setInterval(update,1000); update();
-</script>
-</body>
+</section><!-- SURABAYA --><section class="memory hidden"><img src="surabaya-trip.jpg">
+
+<div class="memory-card">
+
+    <h2>🚆 Surabaya Trip</h2>
+
+    <p>
+        Karena ternyata kota yang berbeda
+        terasa seperti rumah
+        ketika bersamamu.
+    </p>
+
+</div>
+
+</section><!-- SENYUM --><section class="smile-section hidden"><img src="senyum-favoritku.jpg">
+
+<div class="smile-text">
+
+    <p>
+        Dari semua hal yang aku suka tentangmu...
+    </p>
+
+    <h2>
+        Yang paling aku suka adalah
+        senyummu ❤️
+    </h2>
+
+</div>
+
+</section><!-- LETTER --><section class="letter hidden"><div class="envelope">
+
+    <div class="letter-content">
+
+        <h2>💌 Untuk Silvi</h2>
+
+        <p>
+            Selamat ulang tahun yang ke-23, Sayang.
+            <br><br>
+
+            Terima kasih sudah hadir dalam hidupku.
+            Terima kasih sudah membalas satu pesan sederhana:
+
+            <br><br>
+
+            "haii"
+
+            <br><br>
+
+            Aku masih sering tersenyum sendiri ketika mengingat bagaimana semuanya dimulai.
+
+            <br><br>
+
+            LINE Nearby.
+            Sebuah pesan sederhana.
+            Sebuah kata sederhana.
+
+            <br><br>
+
+            "haloo"
+
+            <br><br>
+
+            Dan karena itulah aku bersyukur.
+
+            Karena dari semua kemungkinan yang ada,
+            aku menemukanmu ❤️
+        </p>
+
+    </div>
+
+</div>
+
+</section><!-- COUNTER --><section class="counter-section hidden"><h2>⏳ Sudah Bersama Selama</h2>
+
+<div id="counter"></div>
+
+<p>Sejak 24 Maret 2026 ❤️</p>
+
+</section><!-- ENDING --><section class="ending hidden"><h2>
+    Terima kasih sudah lahir ke dunia.
+</h2>
+
+<p>
+    Karena kalau tidak...
+</p>
+
+<p>
+    Aku tidak akan pernah menemukanmu ❤️
+</p>
+
+<div class="ending-chat">
+
+    <p>💬 haloo</p>
+
+    <p>💬 haii</p>
+
+</div>
+
+<h1>
+    Jundan ❤️ Silvi
+</h1>
+
+<p>
+    Forever started with
+    haloo & haii 🤭
+</p>
+
+</section><script src="script.js"></script></body>
 </html>
