@@ -231,35 +231,23 @@ createPetal,
 TYPEWRITER EFFECT
 =================================== */
 
-const letter =
-document.querySelector(
-".letter-content p"
-);
+/* LETTER ANIMATION */
 
-if(letter){
+const letterCard =
+document.querySelector(".letter-content");
 
-const original =
-letter.innerHTML;
+if(letterCard){
 
-letter.innerHTML = "";
+    letterCard.style.opacity = "0";
 
-let i = 0;
+    setTimeout(()=>{
 
-function type(){
+        letterCard.style.transition =
+        "1.5s";
 
-    if(i < original.length){
+        letterCard.style.opacity = "1";
 
-        letter.innerHTML +=
-        original.charAt(i);
-
-        i++;
-
-        setTimeout(
-            type,
-            20
-        );
-
-    }
+    },800);
 
 }
 
